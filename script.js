@@ -87,10 +87,49 @@ document.addEventListener("click", function (event) {
 
 });
 
-const programDetails = document.getElementById("program-details");
+// =========================================
+// PROGRAM LEARN MORE LINKS
+// =========================================
 
-const programLink = document.querySelector(".program-link");
+const programLinks = document.querySelectorAll(".program-link");
+const programSections = document.querySelectorAll(".program-details");
 
-programLink.addEventListener("click", function () {
-    programDetails.style.display = "block";
+programLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        // Hide all program details first
+        programSections.forEach(function (section) {
+            section.style.display = "none";
+        });
+
+        // Show the selected program
+        const target = document.querySelector(link.getAttribute("href"));
+
+        if (target) {
+            target.style.display = "block";
+        }
+
+    });
+
+});
+
+
+// =========================================
+// BACK TO PROGRAMS
+// =========================================
+
+const backButtons = document.querySelectorAll(".back-home");
+
+backButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        // Hide all program details
+        programSections.forEach(function (section) {
+            section.style.display = "none";
+        });
+
+    });
+
 });
