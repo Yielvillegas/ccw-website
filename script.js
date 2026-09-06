@@ -86,3 +86,11 @@ document.addEventListener("click", function (event) {
     }
 
 });
+
+const programDetails = document.getElementById("program-details");
+
+const programLink = document.querySelector(".program-link");
+
+programLink.addEventListener("click", function () {
+    programDetails.style.display = "block";
+});

@@ -1858,3 +1858,7 @@ footer p {
     }
 
 }
+
+.program-details {
+    display: none;
+}
